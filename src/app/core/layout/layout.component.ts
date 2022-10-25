@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { TokenService } from '../services/token.service';
 
 @Component({
   selector: 'app-layout',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
   title = 'Wiki Movies';
-  constructor() {}
-
+  constructor(private tokenService: TokenService, private router: Router) {}
   ngOnInit(): void {}
+  logout() {
+    this.tokenService.clear();
+    this.router.navigateByUrl('/login');
+  }
 }
