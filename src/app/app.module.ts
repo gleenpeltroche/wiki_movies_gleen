@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +14,9 @@ import { RegisterComponent } from './register/register.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
+import { JwtInterceptorProvider } from './core/helpers/interceptors/jwt.interceptor';
+import { MovieComponent } from './movie/movie.component';
+import { DetailMovieComponent } from './detail-movie/detail-movie.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,8 @@ import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
     LoginComponent,
     RegisterComponent,
     NotfoundComponent,
+    MovieComponent,
+    DetailMovieComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,8 +36,10 @@ import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
     FlexLayoutModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
+    JwtInterceptorProvider,
     {
       provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
       useValue: { duration: 3000 },

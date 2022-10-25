@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { UserModel } from '../core/models/user.model';
 import { AuthService } from '../core/services/auth.service';
 import { TokenService } from '../core/services/token.service';
 
@@ -10,9 +11,9 @@ import { TokenService } from '../core/services/token.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  formSignIn: any = {
-    email: 'admin@newhorizons.edu.pe',
-    password: '123456',
+  formSignIn: UserModel = {
+    email: '',
+    password: '',
   };
 
   constructor(

@@ -10,4 +10,8 @@ export const environment = {
     tokenKey: 'WM_TOKEN',
     userKey: 'WM_USER',
   },
+  jwtAuthorization: {
+    authText: 'Authorization',
+    tokenText: 'Bearer',
+  },
 };
