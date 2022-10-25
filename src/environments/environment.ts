@@ -6,4 +6,8 @@ export const environment = {
     signUpUrl: 'signUp',
     apiKey: '?key=AIzaSyDBuXSetADJSpBBOxT-7wsVMT3fVurlE3U',
   },
+  localStorage: {
+    tokenKey: 'WM_TOKEN',
+    userKey: 'WM_USER',
+  },
 };
