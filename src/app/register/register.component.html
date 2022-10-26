@@ -66,3 +66,12 @@
     </mat-card-content>
   </mat-card>
 </div>
+<ng-template #modalMensajes>
+  <h2 mat-dialog-title>Aviso</h2>
+  <mat-dialog-content>
+    <mat-label>{{ mensaje }}</mat-label>
+  </mat-dialog-content>
+  <mat-dialog-actions style="margin-top: 15px; justify-content: right">
+    <button mat-raised-button class="mat-primary" mat-dialog-close>Ok</button>
+  </mat-dialog-actions>
+</ng-template>
