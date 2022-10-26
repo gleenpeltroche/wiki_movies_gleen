@@ -1,3 +1,7 @@
+# Clase 26 Oct 19:00 - 21:00
+
+[Microsoft Temas](https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZTliZTg5MTktODUzYS00MDM4LWE3NGUtYjQ1NTE3OGUzYzcy%40thread.v2/0?context=%7b%22Tid%22%3a%227859d870-d445-4258-913b-20c433547b56%22%2c%22Oid%22%3a%22c1d4a3d8-2da4-4e7a-bd40-eed1869531b3%22%7d)
+
 # Wikimovies
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
