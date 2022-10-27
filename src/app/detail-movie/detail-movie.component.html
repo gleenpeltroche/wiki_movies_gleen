@@ -1,12 +1,12 @@
-<mat-grid-list cols="5" rowHeight="275px">
-  <mat-grid-tile colspan="1" rowspan="3">
+<mat-grid-list cols="5" rowHeight="250px">
+  <mat-grid-tile colspan="1" rowspan="3" style="background: white">
     <img
       mat-card-image
       src="{{ 'https://image.tmdb.org/t/p/w500/' + movie?.poster_path }}"
     />
   </mat-grid-tile>
-  <mat-grid-tile colspan="4" rowspan="2">
-    <mat-card>
+  <mat-grid-tile colspan="4" rowspan="3" style="background: white">
+    <mat-card style="background: white" class="mat-elevation-z0">
       <mat-card-subtitle>{{ movie?.release_date }}</mat-card-subtitle>
       <mat-card-title>{{ movie?.title }}</mat-card-title>
       <mat-card-content>
@@ -51,7 +51,6 @@
           ><mat-icon>arrow_back_ios</mat-icon> Regresar</a
         >
       </mat-card-actions>
-      <mat-card-footer> </mat-card-footer>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
