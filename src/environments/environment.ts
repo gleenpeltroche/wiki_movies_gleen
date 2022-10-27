@@ -9,6 +9,7 @@ export const environment = {
   theMovieApi: {
     baseUrl: 'https://api.themoviedb.org/3',
     popularMovies: '/movie/popular',
+    getMovie: '/movie/',
     apiKey: '739d88f0ca8909ee15f7310778dcb551',
   },
   localStorage: {

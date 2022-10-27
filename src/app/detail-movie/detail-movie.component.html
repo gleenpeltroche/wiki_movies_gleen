@@ -1,1 +1,57 @@
-<p>detail-movie works!</p>
+<mat-grid-list cols="5" rowHeight="275px">
+  <mat-grid-tile colspan="1" rowspan="3">
+    <img
+      mat-card-image
+      src="{{ 'https://image.tmdb.org/t/p/w500/' + movie?.poster_path }}"
+    />
+  </mat-grid-tile>
+  <mat-grid-tile colspan="4" rowspan="2">
+    <mat-card>
+      <mat-card-subtitle>{{ movie?.release_date }}</mat-card-subtitle>
+      <mat-card-title>{{ movie?.title }}</mat-card-title>
+      <mat-card-content>
+        <p>
+          {{ movie?.overview }}
+        </p>
+      </mat-card-content>
+      <mat-card-subtitle>Reparto</mat-card-subtitle>
+      <img
+        class="avatar-cast"
+        mat-card-avatar
+        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+        alt="Photo of a Shiba Inu"
+      />
+      <img
+        class="avatar-cast"
+        mat-card-avatar
+        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+        alt="Photo of a Shiba Inu"
+      />
+      <img
+        class="avatar-cast"
+        mat-card-avatar
+        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+        alt="Photo of a Shiba Inu"
+      />
+      <img
+        class="avatar-cast"
+        mat-card-avatar
+        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+        alt="Photo of a Shiba Inu"
+      />
+      <img
+        class="avatar-cast"
+        mat-card-avatar
+        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+        alt="Photo of a Shiba Inu"
+      />
+      <br /><br />
+      <mat-card-actions>
+        <a mat-button routerLink="/"
+          ><mat-icon>arrow_back_ios</mat-icon> Regresar</a
+        >
+      </mat-card-actions>
+      <mat-card-footer> </mat-card-footer>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
