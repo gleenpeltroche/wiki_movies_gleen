@@ -1,4 +1,3 @@
-import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import {
   FormBuilder,
@@ -19,10 +18,10 @@ import { AuthService } from '../core/services/auth.service';
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
-  @ViewChild('modalMensajes')
-  modalMensajes!: TemplateRef<any>;
+  @ViewChild('templateModal')
+  templateRefModal!: TemplateRef<any>;
 
-  mensaje = '';
+  message = '';
   registerForm: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
@@ -50,7 +49,7 @@ export class RegisterComponent implements OnInit {
   handleSignUp(userToRegister: UserModel) {
     this.authService.signUp(userToRegister).subscribe({
       next: (response) => {
-        this.mostrarMensaje('El usuario se registró correctamente.');
+        this.openModal('El usuario se registró correctamente.');
       },
       error: (error) => {
         if (error.status === 400)
@@ -58,10 +57,10 @@ export class RegisterComponent implements OnInit {
       },
     });
   }
-  mostrarMensaje(mensaje: string) {
-    this.mensaje = mensaje;
-    const openDialog = this.dialog.open(this.modalMensajes);
-    openDialog.afterClosed().subscribe((res) => {
+  openModal(message: string) {
+    this.message = message;
+    const openDialog = this.dialog.open(this.templateRefModal);
+    openDialog.afterClosed().subscribe(() => {
       this.router.navigateByUrl('/login');
     });
   }

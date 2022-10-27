@@ -24,10 +24,11 @@ export class JwtInterceptor implements HttpInterceptor {
       newRequest = request.clone({
         headers: request.headers.set(
           environment.jwtAuthorization.authText,
-          `${environment.jwtAuthorization.tokenText}${token}`
+          `${environment.jwtAuthorization.tokenText} ${token}`
         ),
       });
     }
+    console.log(newRequest.headers);
     return next.handle(newRequest);
   }
 }

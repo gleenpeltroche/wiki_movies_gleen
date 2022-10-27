@@ -17,6 +17,7 @@ import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 import { JwtInterceptorProvider } from './core/helpers/interceptors/jwt.interceptor';
 import { MovieComponent } from './movie/movie.component';
 import { DetailMovieComponent } from './detail-movie/detail-movie.component';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { DetailMovieComponent } from './detail-movie/detail-movie.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxSkeletonLoaderModule,
   ],
   providers: [
     JwtInterceptorProvider,

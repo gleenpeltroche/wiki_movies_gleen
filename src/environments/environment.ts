@@ -6,6 +6,11 @@ export const environment = {
     signUpUrl: 'signUp',
     apiKey: '?key=AIzaSyDBuXSetADJSpBBOxT-7wsVMT3fVurlE3U',
   },
+  theMovieApi: {
+    baseUrl: 'https://api.themoviedb.org/3',
+    popularMovies: '/movie/popular',
+    apiKey: '739d88f0ca8909ee15f7310778dcb551',
+  },
   localStorage: {
     tokenKey: 'WM_TOKEN',
     userKey: 'WM_USER',
