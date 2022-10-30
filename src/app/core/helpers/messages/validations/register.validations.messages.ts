@@ -8,7 +8,7 @@ export const RegisterValidationsMessages = {
   password: [
     { type: 'required', message: 'La contraseña es requerida.' },
     {
-      type: 'minlegth',
+      type: 'minlength',
       message: 'La constraseña debe tener un minimo de 6 caracteres.',
     },
   ],

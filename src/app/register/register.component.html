@@ -21,6 +21,10 @@
             formControlName="firstName"
             name="firstName"
           />
+          <mat-error *ngIf="registerForm.controls['firstName'].errors">
+            {{getInputErrorMessage('firstName', registerForm.controls['firstName'].errors)}}
+          </mat-error>
+          <!-- <mat-error *ngIf="RegisterValidationsMessages.firstName">{{'El nombre es obligatorio'}}</mat-error> -->
         </mat-form-field>
         <mat-form-field class="public-form-full-width">
           <input
@@ -29,6 +33,9 @@
             formControlName="lastName"
             name="lastName"
           />
+          <mat-error *ngIf="registerForm.controls['lastName'].errors">
+            {{getInputErrorMessage('lastName', registerForm.controls['lastName'].errors)}}
+          </mat-error>
         </mat-form-field>
         <mat-form-field class="public-form-full-width">
           <input
@@ -37,6 +44,9 @@
             formControlName="email"
             name="email"
           />
+          <mat-error *ngIf="registerForm.controls['email'].errors">
+            {{getInputErrorMessage('email', registerForm.controls['email'].errors)}}
+          </mat-error>
         </mat-form-field>
         <mat-form-field class="public-form-full-width">
           <input
@@ -46,6 +56,9 @@
             formControlName="password"
             name="password"
           />
+          <mat-error *ngIf="registerForm.controls['password'].errors">
+            {{getInputErrorMessage('password', registerForm.controls['password'].errors)}}
+          </mat-error>
         </mat-form-field>
       </mat-card-content>
       <mat-card-content>

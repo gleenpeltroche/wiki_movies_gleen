@@ -10,7 +10,13 @@ export const environment = {
     baseUrl: 'https://api.themoviedb.org/3',
     popularMovies: '/movie/popular',
     getMovie: '/movie/',
+    getPeople: '/credits',
     apiKey: '739d88f0ca8909ee15f7310778dcb551',
+    baseUrlActorPath: 'https://image.tmdb.org/t/p/original/'
+  },
+  rickMortyApi: {
+    baseUrl: 'https://rickandmortyapi.com/api/',
+    characters: 'character'
   },
   localStorage: {
     tokenKey: 'WM_TOKEN',

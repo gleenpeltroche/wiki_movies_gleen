@@ -20,7 +20,6 @@ import { AuthService } from '../core/services/auth.service';
 export class RegisterComponent implements OnInit {
   @ViewChild('templateModal')
   templateRefModal!: TemplateRef<any>;
-
   message = '';
   registerForm: FormGroup;
   constructor(
@@ -56,6 +55,16 @@ export class RegisterComponent implements OnInit {
           this.snackBar.open('El usuario ya existe.', 'OK');
       },
     });
+  }
+  checkForm(){
+    console.log(this.registerForm.controls);
+  }
+  getInputErrorMessage(formControlName: string, formError: any){
+    let errorMessage = ''
+    RegisterValidationsMessages[formControlName as keyof typeof RegisterValidationsMessages].forEach(errorType => {
+      if(formError[errorType.type]) errorMessage = errorType.message
+    });
+    return errorMessage;
   }
   openModal(message: string) {
     this.message = message;
